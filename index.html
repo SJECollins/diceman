@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>The Dicemant</title>
+</head>
+<body>
+    <h1>The Diceman</h1>
+    <div id="img-container">
+        <img id="images" src="assets/images/diceman.png" alt="diceman">
+    </div>
+    <div id="enter-choices">
+        <p>Enter up to six tasks you need to decide between...</p>
+        <textarea id="choices" rows="6" placeholder="Enter six comma-separated choices"></textarea>
+        <button id="choice-btn">Submit</button>
+    </div>
+    <div id="choice-display">
+        <p>Choices:</p>
+        <ul id="choices-list"></ul>
+        <button id="roll">Roll</button>              
+    </div>  
+    <h2 id="result"></h2>
+    <div id="message"></div>
+    <button id="reset">Reset</button>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
