@@ -80,7 +80,6 @@ choiceBtn.addEventListener("click", () => {
 const displayChoices = () => {
   choicesDisplay.style.display = "flex";
   choicesList.innerHTML = "";
-  console.log(choicesArr);
   choicesArr.forEach((choice) => {
     let item = document.createElement("li");
     choiceText = choice.charAt(0).toUpperCase() + choice.slice(1);
@@ -91,14 +90,16 @@ const displayChoices = () => {
 
 const rollDice = () => {
   imgDisplay.src = diceroll;
+  let randomIndex = Math.floor(Math.random() * diceImages.length);
   setTimeout(() => {
-    let randomIndex = Math.floor(Math.random() * diceImages.length);
     imgDisplay.src = diceImages[randomIndex];
+  }, 2000);
+  setTimeout(() => {
     resultDisplay.style.display = "block";
     resultDisplay.innerHTML = choicesArr[randomIndex];
     resetBtn.innerHTML = "Try Again";
     choicesDisplay.style.display = "none";
-  }, 2000);
+  }, 2500);
 };
 
 const displayMessage = (message) => {
